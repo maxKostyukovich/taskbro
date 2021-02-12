@@ -1,8 +1,10 @@
 import {User} from "./infrastructure/entity/User";
+import {config} from "dotenv";
 
+config();
 export default {
   type: 'mongodb',
-  host: '172.18.0.1',
+  host: process.env.DATABASE_HOST,
   //password: 'mongodb://localhost:27017',
   port: 27017,
   database: 'taskbro',
